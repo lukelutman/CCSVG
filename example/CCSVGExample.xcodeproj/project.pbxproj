@@ -1,0 +1,368 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3E8315BD157409C00086129D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E8315BC157409C00086129D /* UIKit.framework */; };
+		3E8315BF157409C00086129D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E8315BE157409C00086129D /* Foundation.framework */; };
+		3E8315C1157409C00086129D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E8315C0157409C00086129D /* CoreGraphics.framework */; };
+		3E8315C7157409C00086129D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3E8315C5157409C00086129D /* InfoPlist.strings */; };
+		3E8315C9157409C00086129D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8315C8157409C00086129D /* main.m */; };
+		3E8315CD157409C00086129D /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3E8315CC157409C00086129D /* AppDelegate.mm */; };
+		3E8315E715740A910086129D /* libCCSVG.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E8315E615740A910086129D /* libCCSVG.a */; };
+		3E83163215740B560086129D /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E83162D15740B560086129D /* OpenGLES.framework */; };
+		3E83163315740B560086129D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E83162E15740B560086129D /* QuartzCore.framework */; };
+		3E83163715740B7D0086129D /* libcocos2d.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E83163415740B7D0086129D /* libcocos2d.a */; };
+		3E83163815740B7D0086129D /* libMonkSVG_iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E83163515740B7D0086129D /* libMonkSVG_iOS.a */; };
+		3E83163915740B7D0086129D /* libMonkVG_iOS_OpenGL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E83163615740B7D0086129D /* libMonkVG_iOS_OpenGL.a */; };
+		3E83163D157411C10086129D /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E83163C157411C10086129D /* libz.dylib */; };
+		3E831644157412060086129D /* ff_player_idle_0001.svg in Resources */ = {isa = PBXBuildFile; fileRef = 3E831640157412060086129D /* ff_player_idle_0001.svg */; };
+		3E831645157412060086129D /* ff_player_idle_0002.svg in Resources */ = {isa = PBXBuildFile; fileRef = 3E831642157412060086129D /* ff_player_idle_0002.svg */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3E8315B8157409C00086129D /* CCSVGExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CCSVGExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E8315BC157409C00086129D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		3E8315BE157409C00086129D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3E8315C0157409C00086129D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		3E8315C4157409C00086129D /* CCSVGExample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CCSVGExample-Info.plist"; sourceTree = "<group>"; };
+		3E8315C6157409C00086129D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3E8315C8157409C00086129D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3E8315CA157409C00086129D /* CCSVGExample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CCSVGExample-Prefix.pch"; sourceTree = "<group>"; };
+		3E8315CB157409C00086129D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3E8315CC157409C00086129D /* AppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
+		3E8315E615740A910086129D /* libCCSVG.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libCCSVG.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E83162D15740B560086129D /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		3E83162E15740B560086129D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		3E83163415740B7D0086129D /* libcocos2d.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcocos2d.a; path = "../../../Library/Developer/Xcode/DerivedData/CCSVGExample-fwgscebjqlupvmflufrhkxxrhyub/Build/Products/Debug-iphoneos/libcocos2d.a"; sourceTree = "<group>"; };
+		3E83163515740B7D0086129D /* libMonkSVG_iOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMonkSVG_iOS.a; path = "../../../Library/Developer/Xcode/DerivedData/CCSVGExample-fwgscebjqlupvmflufrhkxxrhyub/Build/Products/Debug-iphoneos/libMonkSVG_iOS.a"; sourceTree = "<group>"; };
+		3E83163615740B7D0086129D /* libMonkVG_iOS_OpenGL.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMonkVG_iOS_OpenGL.a; path = "../../../Library/Developer/Xcode/DerivedData/CCSVGExample-fwgscebjqlupvmflufrhkxxrhyub/Build/Products/Debug-iphoneos/libMonkVG_iOS_OpenGL.a"; sourceTree = "<group>"; };
+		3E83163C157411C10086129D /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		3E831641157412060086129D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = en; path = en.lproj/ff_player_idle_0001.svg; sourceTree = "<group>"; };
+		3E831643157412060086129D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = en; path = en.lproj/ff_player_idle_0002.svg; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3E8315B5157409C00086129D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E83163D157411C10086129D /* libz.dylib in Frameworks */,
+				3E83163715740B7D0086129D /* libcocos2d.a in Frameworks */,
+				3E83163815740B7D0086129D /* libMonkSVG_iOS.a in Frameworks */,
+				3E83163915740B7D0086129D /* libMonkVG_iOS_OpenGL.a in Frameworks */,
+				3E83163215740B560086129D /* OpenGLES.framework in Frameworks */,
+				3E83163315740B560086129D /* QuartzCore.framework in Frameworks */,
+				3E8315C1157409C00086129D /* CoreGraphics.framework in Frameworks */,
+				3E8315E715740A910086129D /* libCCSVG.a in Frameworks */,
+				3E8315BD157409C00086129D /* UIKit.framework in Frameworks */,
+				3E8315BF157409C00086129D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3E8315AD157409C00086129D = {
+			isa = PBXGroup;
+			children = (
+				3E8315C2157409C00086129D /* CCSVGExample */,
+				3E8315BB157409C00086129D /* Frameworks */,
+				3E8315B9157409C00086129D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3E8315B9157409C00086129D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3E8315B8157409C00086129D /* CCSVGExample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3E8315BB157409C00086129D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3E8315C0157409C00086129D /* CoreGraphics.framework */,
+				3E8315BE157409C00086129D /* Foundation.framework */,
+				3E8315E615740A910086129D /* libCCSVG.a */,
+				3E83163415740B7D0086129D /* libcocos2d.a */,
+				3E83163515740B7D0086129D /* libMonkSVG_iOS.a */,
+				3E83163615740B7D0086129D /* libMonkVG_iOS_OpenGL.a */,
+				3E83163C157411C10086129D /* libz.dylib */,
+				3E83162D15740B560086129D /* OpenGLES.framework */,
+				3E83162E15740B560086129D /* QuartzCore.framework */,
+				3E8315BC157409C00086129D /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3E8315C2157409C00086129D /* CCSVGExample */ = {
+			isa = PBXGroup;
+			children = (
+				3E83163F157411DC0086129D /* Classes */,
+				3E83163E157411D50086129D /* Resources */,
+				3E8315C3157409C00086129D /* Supporting Files */,
+			);
+			path = CCSVGExample;
+			sourceTree = "<group>";
+		};
+		3E8315C3157409C00086129D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3E8315C4157409C00086129D /* CCSVGExample-Info.plist */,
+				3E8315CA157409C00086129D /* CCSVGExample-Prefix.pch */,
+				3E8315C8157409C00086129D /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3E83163E157411D50086129D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3E831640157412060086129D /* ff_player_idle_0001.svg */,
+				3E831642157412060086129D /* ff_player_idle_0002.svg */,
+				3E8315C5157409C00086129D /* InfoPlist.strings */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		3E83163F157411DC0086129D /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				3E8315CB157409C00086129D /* AppDelegate.h */,
+				3E8315CC157409C00086129D /* AppDelegate.mm */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3E8315B7157409C00086129D /* CCSVGExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3E8315D9157409C10086129D /* Build configuration list for PBXNativeTarget "CCSVGExample" */;
+			buildPhases = (
+				3E8315B4157409C00086129D /* Sources */,
+				3E8315B5157409C00086129D /* Frameworks */,
+				3E8315B6157409C00086129D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CCSVGExample;
+			productName = CCSVGExample;
+			productReference = 3E8315B8157409C00086129D /* CCSVGExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3E8315AF157409C00086129D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 3E8315B2157409C00086129D /* Build configuration list for PBXProject "CCSVGExample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 3E8315AD157409C00086129D;
+			productRefGroup = 3E8315B9157409C00086129D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3E8315B7157409C00086129D /* CCSVGExample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3E8315B6157409C00086129D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E8315C7157409C00086129D /* InfoPlist.strings in Resources */,
+				3E831644157412060086129D /* ff_player_idle_0001.svg in Resources */,
+				3E831645157412060086129D /* ff_player_idle_0002.svg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3E8315B4157409C00086129D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E8315C9157409C00086129D /* main.m in Sources */,
+				3E8315CD157409C00086129D /* AppDelegate.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3E8315C5157409C00086129D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3E8315C6157409C00086129D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		3E831640157412060086129D /* ff_player_idle_0001.svg */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3E831641157412060086129D /* en */,
+			);
+			name = ff_player_idle_0001.svg;
+			sourceTree = "<group>";
+		};
+		3E831642157412060086129D /* ff_player_idle_0002.svg */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3E831643157412060086129D /* en */,
+			);
+			name = ff_player_idle_0002.svg;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3E8315D7157409C10086129D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Lutman Krogh (R9Y2C32V99)";
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SRCROOT)/../external/MonkVG/Frameworks\"",
+					"$(inherited)",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/../external/cocos2d-iphone/cocos2d\"/**",
+					"\"$(SRCROOT)/../external/MonkSVG/src\"",
+					"\"$(SRCROOT)/../external/MonkSVG/src/openvg\"",
+					"\"$(SRCROOT)/../external/MonkVG/include\"",
+					"\"$(TARGET_BUILD_DIR)/include\"",
+					"\"$(OBJROOT)/UninstalledProducts/include\"",
+					"$(inherited)",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "FA35EADE-8044-4B26-9FA2-1929CD73B301";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3E8315D8157409C10086129D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: zinc Roe Inc.";
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SRCROOT)/../external/MonkVG/Frameworks\"",
+					"$(inherited)",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/../external/cocos2d-iphone/cocos2d\"/**",
+					"\"$(SRCROOT)/../external/MonkSVG/src\"",
+					"\"$(SRCROOT)/../external/MonkSVG/src/openvg\"",
+					"\"$(SRCROOT)/../external/MonkVG/include\"",
+					"\"$(TARGET_BUILD_DIR)/include\"",
+					"\"$(OBJROOT)/UninstalledProducts/include\"",
+					"$(inherited)",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "BBFF3A4B-EF79-4C28-B558-6CA64233D83A";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3E8315DA157409C10086129D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CCSVGExample/CCSVGExample-Prefix.pch";
+				INFOPLIST_FILE = "CCSVGExample/CCSVGExample-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/CCSVGExample-fwgscebjqlupvmflufrhkxxrhyub/Build/Products/Debug-iphoneos\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		3E8315DB157409C10086129D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CCSVGExample/CCSVGExample-Prefix.pch";
+				INFOPLIST_FILE = "CCSVGExample/CCSVGExample-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/CCSVGExample-fwgscebjqlupvmflufrhkxxrhyub/Build/Products/Debug-iphoneos\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3E8315B2157409C00086129D /* Build configuration list for PBXProject "CCSVGExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3E8315D7157409C10086129D /* Debug */,
+				3E8315D8157409C10086129D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3E8315D9157409C10086129D /* Build configuration list for PBXNativeTarget "CCSVGExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3E8315DA157409C10086129D /* Debug */,
+				3E8315DB157409C10086129D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3E8315AF157409C00086129D /* Project object */;
+}
