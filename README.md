@@ -6,8 +6,7 @@ CCSVG - Display SVG images on iOS using Cocos2D
 
 CCSVG provides an API for loading, displaying and animating SVG images on iOS using Cocos2D. 
 
-<code>
-	
+
     // load an svg image
     CCSVGSource *source;
     source = [CCSVGSource sourceWithFile:@"player_idle.svg"];
@@ -28,7 +27,6 @@ CCSVG provides an API for loading, displaying and animating SVG images on iOS us
     animate = [CCSVGAnimate actionWithSVGAnimation:animation];
     [sprite runAction:[CCRepeatForever actionWithAction:animate]];
 
-</code>
 
 SVG images are displayed as vector data, not textures. Each file is tesselated and cached in a vertex buffer object, so the peformance penalty of tesselating and uploading the geometry to OpenGL only happens once when the file is first loaded.
 
