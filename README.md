@@ -8,25 +8,25 @@ CCSVG provides an API for loading, displaying and animating SVG images on iOS us
 
 <code>
 	
-// load an svg image
-CCSVGSource *source;
-source = [CCSVGSource sourceWithFile:@"player_idle.svg"];
+    // load an svg image
+    CCSVGSource *source;
+    source = [CCSVGSource sourceWithFile:@"player_idle.svg"];
 
-// display an svg image
-CCSVGSprite *sprite;
-sprite = [CCSVGNode spriteWithSource:source];
-sprite.position = ccp(240,160);
+    // display an svg image
+    CCSVGSprite *sprite;
+    sprite = [CCSVGNode spriteWithSource:source];
+    sprite.position = ccp(240,160);
 
-// create an svg animation
-CCSVGAnimation *animation;
-animation = [CCSVGAnimation animationWithSourcesNamed:@"player_walk_%04d.svg" 
-                                                count:2 
-                                                delay:1.0/15.0];
+    // create an svg animation
+    CCSVGAnimation *animation;
+    animation = [CCSVGAnimation animationWithSourcesNamed:@"player_walk_%04d.svg" 
+                                                    count:2 
+                                                    delay:1.0/15.0];
 
-// run the animation on the sprite
-CCSVGAnimate *animate;
-animate = [CCSVGAnimate actionWithSVGAnimation:animation];
-[sprite runAction:[CCRepeatForever actionWithAction:animate]];
+    // run the animation on the sprite
+    CCSVGAnimate *animate;
+    animate = [CCSVGAnimate actionWithSVGAnimation:animation];
+    [sprite runAction:[CCRepeatForever actionWithAction:animate]];
 
 </code>
 
