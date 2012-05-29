@@ -1,5 +1,5 @@
 #import "CCSVGCache.h"
-#import "CCSVGNode.h"
+#import "CCSVGSprite.h"
 #import "CCSVGSource.h"
 
 #include <vg/openvg.h>
@@ -11,7 +11,7 @@
 
 #pragma mark
 
-@implementation CCSVGNode
+@implementation CCSVGSprite
 
 
 #pragma mark
@@ -21,15 +21,25 @@
 
 #pragma mark
 
-- (id)initWithFile:(NSString *)name {
-    if ((self = [super init])) {
-        self.source = [[CCSVGCache sharedSVGCache] addFile:name];
-    }
-    return self;
++ (id)spriteWithFile:(NSString *)name {
+    return [[[self alloc] initWithFile:name] autorelease];
 }
 
-+ (id)nodeWithFile:(NSString *)name {
-    return [[[self alloc] initWithFile:name] autorelease];
++ (id)spriteWithSource:(CCSVGSource *)source {
+    return [[[self alloc] initWithSource:source] autorelease];
+}
+
+- (id)initWithFile:(NSString *)name {
+    return [self initWithSource:[[CCSVGCache sharedSVGCache] addFile:name]];
+}
+
+- (id)initWithSource:(CCSVGSource *)source {
+    if ((self = [super init])) {
+        self.anchorPoint = ccp(0.5, 0.5);
+        self.contentSize = source.contentSize;
+        self.source = source;
+    }
+    return self;
 }
 
 - (void)dealloc {

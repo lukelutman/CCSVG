@@ -1,5 +1,5 @@
-#import "cocos2d.h"
 #import "AppDelegate.h"
+#import "cocos2d.h"
 #import <CCSVG/CCSVG.h>
 
 
@@ -65,16 +65,14 @@
     scene = [CCScene node];
     [[CCDirector sharedDirector] runWithScene:scene];
     
-    CCSVGNode *node;
-    node = [CCSVGNode node];
-    node.anchorPoint = ccp(0.5, 0.5);
-    node.contentSize = CGSizeMake(128, 128);
-    node.position = ccpMult(ccpFromSize([CCDirector sharedDirector].winSize), 0.5);
-    [scene addChild:node];
+    CCSVGSprite *sprite;
+    sprite = [CCSVGSprite spriteWithFile:@"ff_player_idle_0001.svg"];
+    sprite.position = ccpMult(ccpFromSize([CCDirector sharedDirector].winSize), 0.5);
+    [scene addChild:sprite];
     
     CCSVGAnimation *animation;
     animation = [CCSVGAnimation animationWithSourcesNamed:@"ff_player_idle_%04d.svg" count:2 delay:1.0/15.0];
-    [node runAction:[CCRepeatForever actionWithAction:[CCSVGAnimate actionWithSVGAnimation:animation]]];
+    [sprite runAction:[CCRepeatForever actionWithAction:[CCSVGAnimate actionWithSVGAnimation:animation]]];
         
     return YES;
     

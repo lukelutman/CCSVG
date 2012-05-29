@@ -1,6 +1,6 @@
 #import "CCSVGAnimate.h"
 #import "CCSVGAnimation.h"
-#import "CCSVGNode.h"
+#import "CCSVGSprite.h"
 #import "CCSVGSource.h"
 
 
@@ -81,7 +81,7 @@
     
 	[super startWithTarget:aTarget];
     
-	CCSVGNode *node = target_;
+	CCSVGSprite *node = target_;
 	
 	[origFrame_ release];
 	
@@ -94,7 +94,7 @@
 
 - (void)stop {
 	if( restoreOriginalFrame_ ) {
-		CCSVGNode *node = target_;
+		CCSVGSprite *node = target_;
 		node.source = origFrame_;
 	}
 	
@@ -112,7 +112,7 @@
 		if( [splitTime floatValue] <= t ) {
 			CCSVGAnimationFrame *frame = [frames objectAtIndex:i];
 			frameToDisplay = [frame source];
-			[(CCSVGNode *)target_ setSource: frameToDisplay];
+			[(CCSVGSprite *)target_ setSource: frameToDisplay];
 // TODO:			
 //			NSDictionary *dict = [frame userInfo];
 //			if( dict )

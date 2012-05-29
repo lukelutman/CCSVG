@@ -4,7 +4,7 @@
 @class CCSVGSource;
 
 
-@interface CCSVGNode : CCNode
+@interface CCSVGSprite : CCNode
 
 
 #pragma mark
@@ -14,9 +14,13 @@
 
 #pragma mark
 
++ (id)spriteWithFile:(NSString *)file;
+
++ (id)spriteWithSource:(CCSVGSource *)source;
+
 - (id)initWithFile:(NSString *)file;
 
-+ (id)nodeWithFile:(NSString *)file;
+- (id)initWithSource:(CCSVGSource *)source;
 
 
 @end

@@ -8,7 +8,21 @@
 
 #import "CCSVGSource.h"
 
+@interface CCSVGSource ()
+
+@property (nonatomic, readwrite, assign) MonkSVG::OpenVG_SVGHandler::SmartPtr svg;
+
+@end
+
+
 @implementation CCSVGSource
+
+
+#pragma mark
+
+@synthesize contentSize = contentSize_;
+
+@synthesize svg = svg_;
 
 
 #pragma mark 
@@ -22,10 +36,14 @@
 
 - (id)initWithData:(NSData *)data {
     if ((self = [self init])) {
+        
         MonkSVG::SVG parser;
         parser.initialize(svg_);
         parser.read((char *)data.bytes);
         svg_->optimize();
+        
+        contentSize_ = CGSizeMake(svg_->width(), svg_->height());
+        
     }
     return self;
 }

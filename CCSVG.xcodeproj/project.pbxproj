@@ -16,8 +16,8 @@
 		3E8315411573FAEE0086129D /* CCSVGAnimationCache.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3E8315351573FAEE0086129D /* CCSVGAnimationCache.mm */; };
 		3E8315421573FAEE0086129D /* CCSVGCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E8315361573FAEE0086129D /* CCSVGCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3E8315431573FAEE0086129D /* CCSVGCache.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3E8315371573FAEE0086129D /* CCSVGCache.mm */; };
-		3E8315441573FAEE0086129D /* CCSVGNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E8315381573FAEE0086129D /* CCSVGNode.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3E8315451573FAEE0086129D /* CCSVGNode.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3E8315391573FAEE0086129D /* CCSVGNode.mm */; };
+		3E8315441573FAEE0086129D /* CCSVGSprite.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E8315381573FAEE0086129D /* CCSVGSprite.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3E8315451573FAEE0086129D /* CCSVGSprite.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3E8315391573FAEE0086129D /* CCSVGSprite.mm */; };
 		3E8315461573FAEE0086129D /* CCSVGSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E83153A1573FAEE0086129D /* CCSVGSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3E8315471573FAEE0086129D /* CCSVGSource.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3E83153B1573FAEE0086129D /* CCSVGSource.mm */; };
 		3E8315A2157401EA0086129D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E83159C157401EA0086129D /* CoreGraphics.framework */; };
@@ -42,8 +42,8 @@
 		3E8315351573FAEE0086129D /* CCSVGAnimationCache.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CCSVGAnimationCache.mm; sourceTree = "<group>"; };
 		3E8315361573FAEE0086129D /* CCSVGCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCSVGCache.h; sourceTree = "<group>"; };
 		3E8315371573FAEE0086129D /* CCSVGCache.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CCSVGCache.mm; sourceTree = "<group>"; };
-		3E8315381573FAEE0086129D /* CCSVGNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCSVGNode.h; sourceTree = "<group>"; };
-		3E8315391573FAEE0086129D /* CCSVGNode.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CCSVGNode.mm; sourceTree = "<group>"; };
+		3E8315381573FAEE0086129D /* CCSVGSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCSVGSprite.h; sourceTree = "<group>"; };
+		3E8315391573FAEE0086129D /* CCSVGSprite.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CCSVGSprite.mm; sourceTree = "<group>"; };
 		3E83153A1573FAEE0086129D /* CCSVGSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCSVGSource.h; sourceTree = "<group>"; };
 		3E83153B1573FAEE0086129D /* CCSVGSource.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CCSVGSource.mm; sourceTree = "<group>"; };
 		3E83159C157401EA0086129D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -118,8 +118,8 @@
 				3E8315351573FAEE0086129D /* CCSVGAnimationCache.mm */,
 				3E8315361573FAEE0086129D /* CCSVGCache.h */,
 				3E8315371573FAEE0086129D /* CCSVGCache.mm */,
-				3E8315381573FAEE0086129D /* CCSVGNode.h */,
-				3E8315391573FAEE0086129D /* CCSVGNode.mm */,
+				3E8315381573FAEE0086129D /* CCSVGSprite.h */,
+				3E8315391573FAEE0086129D /* CCSVGSprite.mm */,
 				3E83153A1573FAEE0086129D /* CCSVGSource.h */,
 				3E83153B1573FAEE0086129D /* CCSVGSource.mm */,
 			);
@@ -139,7 +139,7 @@
 				3E83153E1573FAEE0086129D /* CCSVGAnimation.h in Headers */,
 				3E8315401573FAEE0086129D /* CCSVGAnimationCache.h in Headers */,
 				3E8315421573FAEE0086129D /* CCSVGCache.h in Headers */,
-				3E8315441573FAEE0086129D /* CCSVGNode.h in Headers */,
+				3E8315441573FAEE0086129D /* CCSVGSprite.h in Headers */,
 				3E8315461573FAEE0086129D /* CCSVGSource.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -198,7 +198,7 @@
 				3E83153F1573FAEE0086129D /* CCSVGAnimation.mm in Sources */,
 				3E8315411573FAEE0086129D /* CCSVGAnimationCache.mm in Sources */,
 				3E8315431573FAEE0086129D /* CCSVGCache.mm in Sources */,
-				3E8315451573FAEE0086129D /* CCSVGNode.mm in Sources */,
+				3E8315451573FAEE0086129D /* CCSVGSprite.mm in Sources */,
 				3E8315471573FAEE0086129D /* CCSVGSource.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -219,7 +219,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
@@ -236,6 +236,7 @@
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;

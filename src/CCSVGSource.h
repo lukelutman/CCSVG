@@ -1,10 +1,13 @@
-#import <Foundation/Foundation.h>
+#import "cocos2d.h"
 #import <MonkSVG/mkOpenVG_SVG.h>
 
 
-@interface CCSVGSource : NSObject {
-    MonkSVG::OpenVG_SVGHandler::SmartPtr svg_;
-}
+@interface CCSVGSource : NSObject
+
+
+#pragma mark
+
+@property (readwrite, assign) CGSize contentSize;
 
 
 #pragma mark
