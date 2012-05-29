@@ -13,4 +13,7 @@
    <FileRef
       location = "group:CCSVG.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:example/CCSVGExample.xcodeproj">
+   </FileRef>
 </Workspace>

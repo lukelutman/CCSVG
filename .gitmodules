@@ -1,3 +1,9 @@
 [submodule "external/cocos2d-iphone"]
 	path = external/cocos2d-iphone
 	url = git://github.com/cocos2d/cocos2d-iphone.git
+[submodule "external/MonkVG"]
+	path = external/MonkVG
+	url = git@github.com:lukelutman/MonkVG.git
+[submodule "external/MonkSVG"]
+	path = external/MonkSVG
+	url = git@github.com:lukelutman/MonkSVG.git
