@@ -47,9 +47,9 @@ SVG images are displayed as vector data, not textures. Each file is tesselated a
 
 ## Installation
 
-<tt>git clone git@github.com:lukelutman/CCSVG.git</tt>
-<tt>git submodule init</tt>
-<tt>git submodule update</tt>
+  git clone git@github.com:lukelutman/CCSVG.git
+  git submodule init
+  git submodule update
 
 
 ## Dependencies
