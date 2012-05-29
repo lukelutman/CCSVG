@@ -10,6 +10,7 @@ CCSVG provides an API for loading, displaying and animating SVG images on iOS us
     // load an svg image
     CCSVGSource *source;
     source = [CCSVGSource sourceWithFile:@"player_idle.svg"];
+    source.contentSize = CGSizeMake(128,128);
 
     // display an svg image
     CCSVGSprite *sprite;
@@ -41,7 +42,7 @@ SVG images are displayed as vector data, not textures. Each file is tesselated a
 
 ## Drawbacks
 
-* Partial SVG support (see [what is implemented](https://github.com/micahpearlman/MonkVG/blob/master/README.md#what-is-implemented) in MonkVG).
+* Incomplete SVG support (see [what is implemented](https://github.com/micahpearlman/MonkVG/blob/master/README.md#what-is-implemented) in MonkVG).
 * Antialiasing requires multisampling to be enabled, which has a performance penalty.
 
 
@@ -57,10 +58,6 @@ SVG images are displayed as vector data, not textures. Each file is tesselated a
 * [cocos2d-iphone 1.0.1](https://github.com/cocos2d/cocos2d-iphone)
 * [MonkVG](https://github.com/lukelutman/MonkVG)
 * [MonkSVG](https://github.com/lukelutman/MonkSVG)
-
-## Known Issues
-
-* ???
 
 ## Resources
 
