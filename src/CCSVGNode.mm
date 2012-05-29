@@ -4,8 +4,8 @@
 
 #include <vg/openvg.h>
 #include <vg/vgu.h>
-#include <mkSVG.h>
-#include <openvg/mkOpenVG_SVG.h>
+#include <MonkSVG/mkSVG.h>
+#include <MonkSVG/mkOpenVG_SVG.h>
 
 
 

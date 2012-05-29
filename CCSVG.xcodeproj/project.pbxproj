@@ -27,6 +27,7 @@
 		3E8315AB1574027A0086129D /* libMonkSVG_iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E8315A81574027A0086129D /* libMonkSVG_iOS.a */; };
 		3E8315AC1574027A0086129D /* libMonkVG_iOS_OpenGL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E8315A91574027A0086129D /* libMonkVG_iOS_OpenGL.a */; };
 		3E83163A1574100D0086129D /* CCSVG.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E8315201573FA6E0086129D /* CCSVG.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3E83172B157511B70086129D /* boost.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E83172A157511B70086129D /* boost.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 		3E8315A7157402790086129D /* libcocos2d.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcocos2d.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E8315A81574027A0086129D /* libMonkSVG_iOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMonkSVG_iOS.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E8315A91574027A0086129D /* libMonkVG_iOS_OpenGL.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMonkVG_iOS_OpenGL.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E83172A157511B70086129D /* boost.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = boost.framework; path = external/MonkVG/Frameworks/boost.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				3E8315A3157401EA0086129D /* OpenGLES.framework in Frameworks */,
 				3E8315A4157401EA0086129D /* QuartzCore.framework in Frameworks */,
 				3E83151C1573FA6E0086129D /* Foundation.framework in Frameworks */,
+				3E83172B157511B70086129D /* boost.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +94,7 @@
 		3E83151A1573FA6E0086129D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3E83172A157511B70086129D /* boost.framework */,
 				3E83159C157401EA0086129D /* CoreGraphics.framework */,
 				3E83151B1573FA6E0086129D /* Foundation.framework */,
 				3E8315A7157402790086129D /* libcocos2d.a */,
@@ -247,16 +251,15 @@
 			buildSettings = {
 				DSTROOT = /tmp/CCSVG.dst;
 				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SRCROOT)/external/MonkVG/Frameworks\"",
 					"$(inherited)",
+					"\"$(SRCROOT)/external/MonkVG/Frameworks\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				HEADER_SEARCH_PATHS = (
-					"\"$(SRCROOT)/external/cocos2d-iphone/cocos2d\"/**",
-					"\"$(SRCROOT)/external/MonkVG/include\"",
-					"\"$(SRCROOT)/external/MonkSVG/src\"",
-					"\"$(SRCROOT)/external/MonkSVG/src/openvg\"",
 					"$(inherited)",
+					"\"$(SRCROOT)/external/cocos2d-iphone/cocos2d\"/**",
+					"\"$(TARGET_BUILD_DIR)/include\"",
+					"\"$(OBJROOT)/UninstalledProducts/include\"",
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"\"$(SRCROOT)/../../Library/Developer/Xcode/DerivedData/CCSVG-cezvfgarawfetrcrsoqurzoiacbw/Build/Products/Debug-iphoneos\"",
@@ -274,16 +277,15 @@
 			buildSettings = {
 				DSTROOT = /tmp/CCSVG.dst;
 				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SRCROOT)/external/MonkVG/Frameworks\"",
 					"$(inherited)",
+					"\"$(SRCROOT)/external/MonkVG/Frameworks\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				HEADER_SEARCH_PATHS = (
-					"\"$(SRCROOT)/external/cocos2d-iphone/cocos2d\"/**",
-					"\"$(SRCROOT)/external/MonkVG/include\"",
-					"\"$(SRCROOT)/external/MonkSVG/src\"",
-					"\"$(SRCROOT)/external/MonkSVG/src/openvg\"",
 					"$(inherited)",
+					"\"$(SRCROOT)/external/cocos2d-iphone/cocos2d\"/**",
+					"\"$(TARGET_BUILD_DIR)/include\"",
+					"\"$(OBJROOT)/UninstalledProducts/include\"",
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"\"$(SRCROOT)/../../Library/Developer/Xcode/DerivedData/CCSVG-cezvfgarawfetrcrsoqurzoiacbw/Build/Products/Debug-iphoneos\"",

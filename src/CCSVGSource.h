@@ -1,5 +1,5 @@
 #import <Foundation/Foundation.h>
-#import <mkOpenVG_SVG.h>
+#import <MonkSVG/mkOpenVG_SVG.h>
 
 
 @interface CCSVGSource : NSObject {
