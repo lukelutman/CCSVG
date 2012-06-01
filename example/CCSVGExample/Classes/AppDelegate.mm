@@ -55,9 +55,9 @@
     [CCTexture2D setDefaultAlphaPixelFormat:kCCTexture2DPixelFormat_RGBA8888];
     
     [[CCDirector sharedDirector] setAnimationInterval:1.0/60.0];
-	[[CCDirector sharedDirector] setDisplayFPS:YES];
+    [[CCDirector sharedDirector] setDisplayFPS:YES];
     [[CCDirector sharedDirector] setDeviceOrientation:CCDeviceOrientationPortrait];
-	[[CCDirector sharedDirector] setOpenGLView:openGLView];
+    [[CCDirector sharedDirector] setOpenGLView:openGLView];
     [[CCDirector sharedDirector] enableRetinaDisplay:YES];
     [[CCDirector sharedDirector] setProjection:CCDirectorProjection2D];
     
@@ -73,7 +73,7 @@
     CCSVGAnimation *animation;
     animation = [CCSVGAnimation animationWithSourcesNamed:@"bird_%04d.svg" count:2 delay:1.0/15.0];
     [sprite runAction:[CCRepeatForever actionWithAction:[CCSVGAnimate actionWithSVGAnimation:animation]]];
-        
+    
     return YES;
     
 }

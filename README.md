@@ -10,7 +10,6 @@ CCSVG provides an API for loading, displaying and animating SVG images on iOS us
     // load an svg image
     CCSVGSource *source;
     source = [CCSVGSource sourceWithFile:@"player_idle.svg"];
-    source.contentSize = CGSizeMake(128,128);
 
     // display an svg image
     CCSVGSprite *sprite;
