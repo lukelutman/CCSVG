@@ -26,15 +26,12 @@ CCSVG provides an API for loading, displaying and animating SVG images on iOS us
     // run the animation on the sprite
     CCSVGAnimate *animate;
     animate = [CCSVGAnimate actionWithSVGAnimation:animation];
-    [sprite runAction:[CCRepeatForever actionWithAction:animate]];
-
-
-SVG images are displayed as vector data, not textures. Each file is tesselated and cached in a vertex buffer object, so the peformance penalty of tesselating and uploading the geometry to OpenGL only happens once when the file is first loaded. 
-
-There is a significant performance penalty for using images with transparent fills or strokes (drawing them properly means turning on blending in OpenGL). Avoid them where possible.
+    [sprite runAction:[CCRepeatForever actionWithAction:animate]]; 
 
 
 ## Benefits
+
+SVG images are displayed as vector data, not textures. Each file is tesselated and cached in a vertex buffer object, so the peformance penalty of tesselating and uploading the geometry to OpenGL only happens once when the file is first loaded.
 
 * Resolution-independence.
 * Smaller file size. 
@@ -43,6 +40,8 @@ There is a significant performance penalty for using images with transparent fil
 
 
 ## Drawbacks
+
+There is a significant performance penalty for using images with transparent fills or strokes (drawing them properly means turning on blending in OpenGL). Avoid them where possible.
 
 * Incomplete SVG support (see [what is implemented](https://github.com/micahpearlman/MonkVG/blob/master/README.md#what-is-implemented) in MonkVG).
 * Antialiasing requires multisampling to be enabled, which has a performance penalty.
