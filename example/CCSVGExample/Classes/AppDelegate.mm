@@ -66,12 +66,12 @@
     [[CCDirector sharedDirector] runWithScene:scene];
     
     CCSVGSprite *sprite;
-    sprite = [CCSVGSprite spriteWithFile:@"ff_player_idle_0001.svg"];
+    sprite = [CCSVGSprite spriteWithFile:@"bird_0001.svg"];
     sprite.position = ccpMult(ccpFromSize([CCDirector sharedDirector].winSize), 0.5);
     [scene addChild:sprite];
     
     CCSVGAnimation *animation;
-    animation = [CCSVGAnimation animationWithSourcesNamed:@"ff_player_idle_%04d.svg" count:2 delay:1.0/15.0];
+    animation = [CCSVGAnimation animationWithSourcesNamed:@"bird_%04d.svg" count:2 delay:1.0/15.0];
     [sprite runAction:[CCRepeatForever actionWithAction:[CCSVGAnimate actionWithSVGAnimation:animation]]];
         
     return YES;
