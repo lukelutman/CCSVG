@@ -13,6 +13,8 @@
 
 @property (readwrite, assign) CGSize contentSize;
 
+@property (readonly, assign) BOOL hasTransparentColors;
+
 
 #pragma mark
 

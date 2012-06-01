@@ -39,6 +39,10 @@
 
 @synthesize svg = svg_;
 
+- (BOOL)hasTransparentColors {
+	return svg_->hasTransparentColors();
+}
+
 
 #pragma mark 
 

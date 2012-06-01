@@ -53,8 +53,12 @@
 - (void)draw {
     
     // disable default states
-    glDisable(GL_BLEND);
     CC_DISABLE_DEFAULT_GL_STATES();
+    
+    // disable blending
+    if (self.source.hasTransparentColors == NO) {
+        glDisable(GL_BLEND);
+    }
     
     // transform
     CGAffineTransform transform;
@@ -81,9 +85,13 @@
     // apply the transform used for drawing children
     [self transformAncestors];
     
+    // enable blending
+    if (self.source.hasTransparentColors == NO) {
+        glEnable(GL_BLEND);
+    }
+    
     // enable default states
     CC_ENABLE_DEFAULT_GL_STATES();
-    glEnable(GL_BLEND);
     
 }
 

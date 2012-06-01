@@ -29,7 +29,9 @@ CCSVG provides an API for loading, displaying and animating SVG images on iOS us
     [sprite runAction:[CCRepeatForever actionWithAction:animate]];
 
 
-SVG images are displayed as vector data, not textures. Each file is tesselated and cached in a vertex buffer object, so the peformance penalty of tesselating and uploading the geometry to OpenGL only happens once when the file is first loaded.
+SVG images are displayed as vector data, not textures. Each file is tesselated and cached in a vertex buffer object, so the peformance penalty of tesselating and uploading the geometry to OpenGL only happens once when the file is first loaded. 
+
+There is a significant performance penalty for using images with transparent fills or strokes (drawing them properly means turning on blending in OpenGL). Avoid them where possible.
 
 
 ## Benefits
@@ -56,8 +58,8 @@ SVG images are displayed as vector data, not textures. Each file is tesselated a
 ## Dependencies
 
 * [cocos2d-iphone v1.1.0-beta2b](https://github.com/cocos2d/cocos2d-iphone)
-* [MonkVG](https://github.com/lukelutman/MonkVG)
-* [MonkSVG](https://github.com/lukelutman/MonkSVG)
+* [MonkVG](https://github.com/lukelutman/MonkVG) by [Micah Pearlman](https://github.com/micahpearlman)
+* [MonkSVG](https://github.com/lukelutman/MonkSVG) by [Micah Pearlman](https://github.com/micahpearlman)
 
 ## Resources
 
