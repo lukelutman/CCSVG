@@ -1,8 +1,12 @@
 #import "cocos2d.h"
-#import <MonkSVG/mkOpenVG_SVG.h>
 
 
 @interface CCSVGSource : NSObject
+
+
+#pragma mark
+
++ (void)setTessellationIterations:(NSUInteger)numberOfTesselationIterations;
 
 
 #pragma mark

@@ -6,7 +6,11 @@
 //  Copyright (c) 2012 Zinc Roe Design. All rights reserved.
 //
 
+#import <MonkSVG/mkOpenVG_SVG.h>
+#import <VG/openvg.h>
+#import <VG/vgext.h>
 #import "CCSVGSource.h"
+
 
 @interface CCSVGSource ()
 
@@ -16,6 +20,17 @@
 
 
 @implementation CCSVGSource
+
+
+#pragma mark
+
++ (void)initialize {
+    [self setTessellationIterations:3];
+}
+
++ (void)setTessellationIterations:(NSUInteger)numberOfTesselationIterations {
+    vgSeti(VG_TESSELLATION_ITERATIONS_MNK, numberOfTesselationIterations);
+}
 
 
 #pragma mark
