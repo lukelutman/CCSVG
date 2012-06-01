@@ -7,8 +7,8 @@
 //
 
 #import <MonkSVG/mkOpenVG_SVG.h>
-#import <VG/openvg.h>
-#import <VG/vgext.h>
+#import <MonkVG/openvg.h>
+#import <MonkVG/vgext.h>
 #import "CCSVGSource.h"
 
 
