@@ -52,7 +52,8 @@
 
 - (void)draw {
     
-    // disable states
+    // disable default states
+    glDisable(GL_BLEND);
     CC_DISABLE_DEFAULT_GL_STATES();
     
     // transform
@@ -80,8 +81,9 @@
     // apply the transform used for drawing children
     [self transformAncestors];
     
-    // default states
+    // enable default states
     CC_ENABLE_DEFAULT_GL_STATES();
+    glEnable(GL_BLEND);
     
 }
 
