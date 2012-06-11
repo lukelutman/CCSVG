@@ -253,11 +253,13 @@
 				DSTROOT = /tmp/CCSVG.dst;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/../MonkVG/Frameworks\"",
 					"\"$(SRCROOT)/external/MonkVG/Frameworks\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/../cocos2d-iphone/cocos2d\"/**",
 					"\"$(SRCROOT)/external/cocos2d-iphone/cocos2d\"/**",
 					"\"$(TARGET_BUILD_DIR)/include\"",
 					"\"$(OBJROOT)/UninstalledProducts/include\"",
@@ -279,11 +281,13 @@
 				DSTROOT = /tmp/CCSVG.dst;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/../MonkVG/Frameworks\"",
 					"\"$(SRCROOT)/external/MonkVG/Frameworks\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/../cocos2d-iphone/cocos2d\"/**",
 					"\"$(SRCROOT)/external/cocos2d-iphone/cocos2d\"/**",
 					"\"$(TARGET_BUILD_DIR)/include\"",
 					"\"$(OBJROOT)/UninstalledProducts/include\"",
