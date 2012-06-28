@@ -124,7 +124,7 @@ static CCSVGAnimationCache *sharedAnimationCache_ = nil;
 		for (NSString *sourceName in sourceNames) {
             
 			CCSVGSource *source;
-            source = [[CCSVGCache sharedSVGCache] sourceForKey:sourceName];
+            source = [[CCSVGCache sharedSVGCache] addFile:sourceName];
 			
 			if (!source) {
 				CCLOG(@"cocos2d: CCSVGAnimationCache: Animation '%@' refers to source '%@' which is not currently in the CCSVGCache. This frame will not be added to the animation.", animationName, sourceName);

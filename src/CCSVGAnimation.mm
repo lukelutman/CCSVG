@@ -155,7 +155,7 @@
         
 		self.frames = [NSMutableArray arrayWithArray:frames];
 		for (CCSVGAnimationFrame *frame in frames) {
-			self.duration = frame.delayUnits * delayPerUnit;
+			self.duration += frame.delayUnits * delayPerUnit;
 			self.totalDelayUnits += frame.delayUnits;
 		}
         
@@ -170,7 +170,7 @@
 }
 
 - (NSString *)description {
-	return [NSString stringWithFormat:@"<%@ = %08X | frames=%d, totalDelayUnits=%d, delayPerUnit=%f>", 
+	return [NSString stringWithFormat:@"<%@ = %08X | frames=%d, totalDelayUnits=%d, delayPerUnit=%0.2f>", 
             [self class], 
             self,
 			self.frames.count,

@@ -52,6 +52,11 @@
 
 - (void)draw {
     
+    // skip drawing if the sprite has no source
+    if (!self.source) {
+        return;
+    }
+    
     // disable default states
     CC_DISABLE_DEFAULT_GL_STATES();
     

@@ -35,6 +35,8 @@
 
 #pragma mark
 
+@synthesize contentRect = contentRect_;
+
 @synthesize contentSize = contentSize_;
 
 @synthesize svg = svg_;
@@ -61,6 +63,7 @@
         parser.read((char *)data.bytes);
         svg_->optimize();
         
+        contentRect_ = CGRectMake(svg_->minX(), svg_->minY(), svg_->width(), svg_->height());
         contentSize_ = CGSizeMake(svg_->width(), svg_->height());
         
     }

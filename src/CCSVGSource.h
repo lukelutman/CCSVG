@@ -11,6 +11,8 @@
 
 #pragma mark
 
+@property (readwrite, assign) CGRect contentRect;
+
 @property (readwrite, assign) CGSize contentSize;
 
 @property (readonly, assign) BOOL hasTransparentColors;
