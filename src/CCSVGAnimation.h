@@ -33,6 +33,10 @@
 
 #pragma mark
 
+@property (nonatomic, readonly, assign) CGRect contentRect;
+
+@property (nonatomic, readonly, assign) CGSize contentSize;
+
 @property (nonatomic, readwrite, assign) float delayPerUnit;
 
 @property (nonatomic, readwrite, assign) float duration;

@@ -66,6 +66,14 @@
 
 #pragma mark
 
+- (CGRect)contentRect {
+    return ((CCSVGAnimationFrame *)[self.frames objectAtIndex:0]).source.contentRect;
+}
+
+- (CGSize)contentSize {
+    return self.contentRect.size;
+}
+
 @synthesize delayPerUnit = delayPerUnit_;
 
 @synthesize duration = duration_;
