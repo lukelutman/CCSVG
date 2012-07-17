@@ -14,6 +14,8 @@
 
 @interface CCSVGSource ()
 
+@property (nonatomic, readwrite, assign) BOOL isOptimized;
+
 @property (nonatomic, readwrite, assign) MonkSVG::OpenVG_SVGHandler::SmartPtr svg;
 
 @end
@@ -39,6 +41,8 @@
 
 @synthesize contentSize = contentSize_;
 
+@synthesize isOptimized = isOptimized_;
+
 @synthesize svg = svg_;
 
 - (BOOL)hasTransparentColors {
@@ -50,6 +54,7 @@
 
 - (id)init {
     if ((self = [super init])) {
+        isOptimized_ = NO;
         svg_ = boost::static_pointer_cast<MonkSVG::OpenVG_SVGHandler>(MonkSVG::OpenVG_SVGHandler::create());
     }
     return self;
@@ -61,7 +66,6 @@
         MonkSVG::SVG parser;
         parser.initialize(svg_);
         parser.read((char *)data.bytes);
-        svg_->optimize();
         
         contentRect_ = CGRectMake(svg_->minX(), svg_->minY(), svg_->width(), svg_->height());
         contentSize_ = CGSizeMake(svg_->width(), svg_->height());
@@ -92,7 +96,22 @@
 #pragma mark
 
 - (void)draw {
+    
+    if (!isOptimized_) {
+        
+        VGfloat matrix[9];
+        vgGetMatrix(matrix);
+        
+        vgLoadIdentity();
+        svg_->optimize();
+        vgLoadMatrix(matrix);
+        
+        isOptimized_ = YES;
+        
+    }
+    
     svg_->draw();
+    
 }
 
 

@@ -35,7 +35,8 @@
 
 - (id)initWithSource:(CCSVGSource *)source {
     if ((self = [super init])) {
-        self.anchorPoint = ccp(0.5, 0.5);
+        self.anchorPoint = ccp(-source.contentRect.origin.x / source.contentRect.size.width, 
+                               -source.contentRect.origin.y / source.contentRect.size.height);
         self.contentSize = source.contentSize;
         self.source = source;
     }
