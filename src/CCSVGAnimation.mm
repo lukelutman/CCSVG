@@ -52,7 +52,7 @@
 }
 
 - (NSString *)description {
-	return [NSString stringWithFormat:@"<%@ = %08X | Source = %08X, delayUnits = %0.2f >", [self class], self, self.source, self.delayUnits];
+	return [NSString stringWithFormat:@"<%@ = %p | Source = %p, delayUnits = %0.2f >", [self class], self, self.source, self.delayUnits];
 }
 
 
@@ -178,7 +178,7 @@
 }
 
 - (NSString *)description {
-	return [NSString stringWithFormat:@"<%@ = %08X | frames=%d, totalDelayUnits=%d, delayPerUnit=%0.2f>", 
+	return [NSString stringWithFormat:@"<%@ = %p | frames=%d, totalDelayUnits=%f, delayPerUnit=%0.2f>", 
             [self class], 
             self,
 			self.frames.count,
