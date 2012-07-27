@@ -68,7 +68,7 @@ static CCSVGAnimationCache *sharedAnimationCache_ = nil;
 }
 
 - (NSString *)description {
-	return [NSString stringWithFormat:@"<%@ = %08X | num of animations =  %i>", 
+	return [NSString stringWithFormat:@"<%@ = %p | num of animations =  %i>", 
             [self class], 
             self, 
             self.animations.count];
