@@ -11,7 +11,9 @@
 
 #pragma mark
 
-@implementation CCSVGSprite
+@implementation CCSVGSprite {
+    ccBlendFunc blendFunc_;
+}
 
 
 #pragma mark
@@ -37,6 +39,7 @@
     if ((self = [super init])) {
         self.anchorPoint = ccp(-source.contentRect.origin.x / source.contentRect.size.width, 
                                -source.contentRect.origin.y / source.contentRect.size.height);
+        self.blendFunc = (ccBlendFunc){ GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA };
         self.contentSize = source.contentSize;
         self.source = source;
     }
@@ -61,9 +64,17 @@
     // disable default states
     CC_DISABLE_DEFAULT_GL_STATES();
     
-    // disable blending
-    if (self.source.hasTransparentColors == NO) {
+    // handle blending
+    BOOL doBlend;
+    doBlend = self.source.hasTransparentColors;
+    
+    BOOL doBlendFunc;
+    doBlendFunc = (blendFunc_.src != CC_BLEND_SRC || blendFunc_.dst != CC_BLEND_DST);
+    
+    if (!doBlend) {
         glDisable(GL_BLEND);
+    } else if (doBlendFunc) {
+        glBlendFunc(blendFunc_.src, blendFunc_.dst);
     }
     
     // transform
@@ -92,13 +103,26 @@
     [self transformAncestors];
     
     // enable blending
-    if (self.source.hasTransparentColors == NO) {
+    if (!doBlend) {
         glEnable(GL_BLEND);
+    } else if (doBlendFunc) {
+        glBlendFunc(CC_BLEND_SRC, CC_BLEND_DST);
     }
     
     // enable default states
     CC_ENABLE_DEFAULT_GL_STATES();
     
+}
+
+
+#pragma mark - CCBlendProtocol
+
+- (ccBlendFunc)blendFunc {
+    return blendFunc_;
+}
+
+- (void)setBlendFunc:(ccBlendFunc)blendFunc {
+    blendFunc_ = blendFunc;
 }
 
 

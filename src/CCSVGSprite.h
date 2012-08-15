@@ -4,7 +4,7 @@
 @class CCSVGSource;
 
 
-@interface CCSVGSprite : CCNode
+@interface CCSVGSprite : CCNode <CCBlendProtocol>
 
 
 #pragma mark
