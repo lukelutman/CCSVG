@@ -79,4 +79,9 @@
 - (void)addFrameWithSourceNamed:(NSString *)name;
 
 
+#pragma mark
+
+- (void)optimize;
+
+
 @end

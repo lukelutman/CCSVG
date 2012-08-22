@@ -228,5 +228,13 @@
     
 }
 
+#pragma mark
+
+- (void)optimize {
+    for (CCSVGAnimationFrame *frame in self.frames) {
+        [frame.source optimize];
+    }
+}
+
 
 @end
