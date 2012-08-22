@@ -97,6 +97,14 @@
 
 - (void)draw {
     
+    [self optimize];
+    
+    svg_->draw();
+    
+}
+
+- (void)optimize {
+    
     if (!isOptimized_) {
         
         VGfloat matrix[9];
@@ -109,8 +117,6 @@
         isOptimized_ = YES;
         
     }
-    
-    svg_->draw();
     
 }
 

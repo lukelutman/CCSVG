@@ -29,5 +29,7 @@
 
 - (void)draw;
 
+- (void)optimize;
+
 
 @end
