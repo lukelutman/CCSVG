@@ -87,6 +87,21 @@ static CCSVGAnimationCache *sharedAnimationCache_ = nil;
     }
 }
 
+- (void)removeAllAnimations {
+	[animations_ removeAllObjects];
+}
+
+- (void)removeUnusedAnimations {
+	NSArray *keys = [animations_ allKeys];
+	for (id key in keys) {
+        id value = [animations_ objectForKey:key];		
+		if ([value retainCount] == 1) {
+			CCLOG(@"cocos2d: CCSVGAnimationCache: removing unused animation: %@", key);
+			[animations_ removeObjectForKey:key];
+		}
+	}
+}
+
 
 #pragma mark
 

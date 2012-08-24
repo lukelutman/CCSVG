@@ -122,6 +122,7 @@ static CCSVGCache *sharedSVGCache;
 	for (NSString *key in keys) {
 		CCSVGSource *source = [self sourceForKey:key];		
 		if ([source retainCount] == 1) {
+			CCLOG(@"cocos2d: CCSVGCache: removing unused source: %@", key);
 			[self removeSourceForKey:key];
 		}
 	}

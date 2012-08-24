@@ -32,5 +32,9 @@
 
 - (void)removeAnimationByName:(NSString *)name;
 
+- (void)removeAllAnimations;
+
+- (void)removeUnusedAnimations;
+
 
 @end
