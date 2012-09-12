@@ -20,14 +20,7 @@
 		3E8315451573FAEE0086129D /* CCSVGSprite.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3E8315391573FAEE0086129D /* CCSVGSprite.mm */; };
 		3E8315461573FAEE0086129D /* CCSVGSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E83153A1573FAEE0086129D /* CCSVGSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3E8315471573FAEE0086129D /* CCSVGSource.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3E83153B1573FAEE0086129D /* CCSVGSource.mm */; };
-		3E8315A2157401EA0086129D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E83159C157401EA0086129D /* CoreGraphics.framework */; };
-		3E8315A3157401EA0086129D /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E83159D157401EA0086129D /* OpenGLES.framework */; };
-		3E8315A4157401EA0086129D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E83159E157401EA0086129D /* QuartzCore.framework */; };
-		3E8315AA1574027A0086129D /* libcocos2d.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E8315A7157402790086129D /* libcocos2d.a */; };
-		3E8315AB1574027A0086129D /* libMonkSVG_iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E8315A81574027A0086129D /* libMonkSVG_iOS.a */; };
-		3E8315AC1574027A0086129D /* libMonkVG_iOS_OpenGL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E8315A91574027A0086129D /* libMonkVG_iOS_OpenGL.a */; };
 		3E83163A1574100D0086129D /* CCSVG.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E8315201573FA6E0086129D /* CCSVG.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3E83172B157511B70086129D /* boost.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E83172A157511B70086129D /* boost.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,13 +39,6 @@
 		3E8315391573FAEE0086129D /* CCSVGSprite.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CCSVGSprite.mm; sourceTree = "<group>"; };
 		3E83153A1573FAEE0086129D /* CCSVGSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCSVGSource.h; sourceTree = "<group>"; };
 		3E83153B1573FAEE0086129D /* CCSVGSource.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CCSVGSource.mm; sourceTree = "<group>"; };
-		3E83159C157401EA0086129D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		3E83159D157401EA0086129D /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
-		3E83159E157401EA0086129D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		3E8315A7157402790086129D /* libcocos2d.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcocos2d.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		3E8315A81574027A0086129D /* libMonkSVG_iOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMonkSVG_iOS.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		3E8315A91574027A0086129D /* libMonkVG_iOS_OpenGL.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMonkVG_iOS_OpenGL.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		3E83172A157511B70086129D /* boost.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = boost.framework; path = external/MonkVG/Frameworks/boost.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,14 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3E8315AA1574027A0086129D /* libcocos2d.a in Frameworks */,
-				3E8315AB1574027A0086129D /* libMonkSVG_iOS.a in Frameworks */,
-				3E8315AC1574027A0086129D /* libMonkVG_iOS_OpenGL.a in Frameworks */,
-				3E8315A2157401EA0086129D /* CoreGraphics.framework in Frameworks */,
-				3E8315A3157401EA0086129D /* OpenGLES.framework in Frameworks */,
-				3E8315A4157401EA0086129D /* QuartzCore.framework in Frameworks */,
 				3E83151C1573FA6E0086129D /* Foundation.framework in Frameworks */,
-				3E83172B157511B70086129D /* boost.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,14 +73,7 @@
 		3E83151A1573FA6E0086129D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3E83172A157511B70086129D /* boost.framework */,
-				3E83159C157401EA0086129D /* CoreGraphics.framework */,
 				3E83151B1573FA6E0086129D /* Foundation.framework */,
-				3E8315A7157402790086129D /* libcocos2d.a */,
-				3E8315A81574027A0086129D /* libMonkSVG_iOS.a */,
-				3E8315A91574027A0086129D /* libMonkVG_iOS_OpenGL.a */,
-				3E83159D157401EA0086129D /* OpenGLES.framework */,
-				3E83159E157401EA0086129D /* QuartzCore.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
